@@ -19,23 +19,23 @@
   
       <div class="row">
         <div class="col-xs-12 col-md-10">
-
+	  
 	  {% for b in blocks %}
 	  <div class="panel panel-default">
-  	    <div class="panel-heading">
-    	      <a href="#" style="font-size:16px;">{{ b.name }}</a>
-	      <span class="pull-right">{{ b.manager }}</span>
-  	    </div>
-  	    <div class="panel-body">
-  	      {{ b.desc }}
+	    <div class="panel-heading">
+	      <a href="#" style="font-size:14px">{{ b.name }}</a>
+	      <span class="pull-right">{{ b.manager_name }}</span>
 	    </div>
-	  </div>
-	  {% endfor %}
+	    <div class="panel-body">
+	      {{ b.desc }}
+	    </div>
+          </div>
+          {% endfor %}
 
 	</div>
         
       <div class="col-xs-12 col-md-2">
-	  <div class="well">个人中心</div>
+	  <div class="well">匿名用户. 请<a href="#">登录.</a></div>
       </div>
 
     </div>
