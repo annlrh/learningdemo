@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.shortcuts import render, redirect
 
 from block.models import Block
@@ -100,37 +99,3 @@ class Article_Create(View):
     	else:
     		return render(request, self.template_name, {"b":self.block, "form":form})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-from django.shortcuts import render
-
-from block.models import Block
-from article.models import Article
-
-def article_list(request, block_id):
-	
-	block_id = int(block_id)
-	
-	block = Block.objects.get(id=block_id)
-
-	articles_objs = Article.objects.filter(block=block, status=0).order_by("-id")
-
-	return render(request, "article_list.html", {"articles": articles_objs, "b": block})
->>>>>>> f49562bec2f501a96e238443b14444baaee8c724
